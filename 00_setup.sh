@@ -15,4 +15,4 @@ mkdir 06_window_stats
 mkdir 06_window_stats/windows
 mkdir 07_kinship
 mkdir 10_filter
-mkdir 12_filter_vcf
+mkdir 11_filter_vcf
