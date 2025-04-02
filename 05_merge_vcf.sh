@@ -25,6 +25,11 @@ vcftools --vcf ${workdir}/04_vcf/${region_array}.vcf --keep bear_keep.txt --max-
 --mac 2 --max-alleles 2 --max-maf 0.49 --thin 1000 --recode --recode-INFO-all \
 --out ${workdir}/05_pca/structure_${region_array}
 
+# filter for structure (larger subset)
+vcftools --vcf ${workdir}/04_vcf/${region_array}.vcf --keep bear_keep2.txt --max-missing 0.8 \
+--mac 2 --max-alleles 2 --max-maf 0.49 --thin 1000 --recode --recode-INFO-all \
+--out ${workdir}/05_pca/structure2_${region_array}
+
 # filter for kinship (all individuals)
 vcftools --vcf ${workdir}/04_vcf/${region_array}.vcf --max-missing 0.2 \
 --mac 1 --max-alleles 2 --max-maf 0.49 --thin 1000 --recode --recode-INFO-all \
